@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Post In Detail</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Insta Post Detail</h1>
+        <div class="post">
+            <p class="text-muted">Post Id: <%= searchPostById.id %></p>
+            <h3>@<%= searchPostById.username %></h3>
+            <img src="<%= searchPostById.imageUrl %>" alt="User Image" class="img-fluid rounded">
+            <h4 class="mt-3">Caption: <%= searchPostById.caption %></h4>
+        </div>
+    </div>
+</body>
+</html>

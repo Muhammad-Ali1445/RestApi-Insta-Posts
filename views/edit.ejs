@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit a Post</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Edit Post</h1>
+        <div class="post">
+            <p class="text-muted">Post Id: <%= searchPostById.id %></p>
+            <h3>@<%= searchPostById.username %></h3>
+            <form method="POST" action="/instaPosts/<%= searchPostById.id %>?_method=PATCH">
+                <div class="form-group">
+                    <textarea class="form-control" name="caption" rows="5"><%= searchPostById.caption %></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
